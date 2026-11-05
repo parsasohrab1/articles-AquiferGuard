@@ -27,7 +27,7 @@ def test_features_use_only_past_values():
 
 def test_dataset_targets_are_future_changes():
     w = make_wells(1, 60, np.random.default_rng(3))[0]
-    X, y, base = dataset([w], 6, 10, 20)
+    _x, y, base = dataset([w], 6, 10, 20)
     assert y[0] == w.head[16] - w.head[10] and base[0] == w.head[10]
 
 
