@@ -4,19 +4,22 @@ from __future__ import annotations
 
 import numpy as np
 
-from .forecast import Forecaster, features
+from .forecast import Forecaster
 from .synth import Well
+
+
+def _predicted_head(fc: Forecaster, w: Well, t: int) -> float:
+    change = float(fc.predict_change(fc.feature_fn(w, t)[None, :])[0])
+    return float(w.head[t] + change)
 
 
 def conformal_alert(fc: Forecaster, w: Well, t: int, half: float, critical_head: float) -> bool:
     """Alert when the lower bound of the forecast head is below the critical head."""
-    pred = w.head[t] + float(fc.predict_change(features(w, t)[None, :])[0])
-    return pred - half < critical_head
+    return _predicted_head(fc, w, t) - half < critical_head
 
 
 def point_alert(fc: Forecaster, w: Well, t: int, critical_head: float) -> bool:
-    pred = w.head[t] + float(fc.predict_change(features(w, t)[None, :])[0])
-    return pred < critical_head
+    return _predicted_head(fc, w, t) < critical_head
 
 
 def trend_alert(w: Well, t: int, horizon: int, critical_head: float, window: int = 12) -> bool:

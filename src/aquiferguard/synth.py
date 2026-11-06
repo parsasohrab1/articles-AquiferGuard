@@ -12,6 +12,14 @@ class Well:
     head: np.ndarray        # monthly groundwater head (m above datum), shape (T,)
     rain: np.ndarray        # monthly rainfall index, shape (T,)
     pumping: np.ndarray     # monthly abstraction index, shape (T,)
+    station: str = ""
+    site_id: str = ""
+    latitude: float = float("nan")
+    longitude: float = float("nan")
+    county: str = ""
+    coord_ok: bool = True
+    # Cumulative vertical displacement (m) on the same monthly index as head, if known.
+    displacement: np.ndarray | None = None
 
 
 def make_wells(n_wells: int, months: int, rng: np.random.Generator,

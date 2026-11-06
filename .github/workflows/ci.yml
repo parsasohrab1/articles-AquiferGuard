@@ -13,3 +13,4 @@ jobs:
       - run: pip install -e ".[dev]"
       - run: ruff check src tests research
       - run: python -m pytest -q
+      - run: python research/run_study.py --check

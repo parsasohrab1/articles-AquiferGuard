@@ -20,4 +20,4 @@ Regional water companies, the Ministry of Energy, geological survey.
 In: head forecasting and alerts per well, subsidence proxy. Out: InSAR processing, spatial interpolation, abstraction scenarios, a full groundwater flow model.
 
 ## Success measures (on real wells)
-Forecast error vs persistence, interval coverage, alert precision and recall on held-out wells and years.
+Forecast error versus persistence and ordinary regression, interval coverage, and alert precision and recall on held-out wells. The DWR continuous-network result is in [TRL.md](TRL.md). The subsidence warning is part of the same score and is currently not supported.

@@ -1,7 +1,7 @@
 [project]
 name = "aquiferguard"
 version = "0.1.0"
-description = "Groundwater-level forecasting with calibrated intervals and subsidence alerts (simulation-validated, TRL 4)"
+description = "Groundwater-level forecasting with calibrated intervals and subsidence alerts"
 requires-python = ">=3.10"
 dependencies = ["numpy>=1.24"]
 
