@@ -1,0 +1,173 @@
+{
+  "synthetic": {
+    "note": "synthetic wells; head change over 6 months; target coverage 0.90",
+    "conformal_half_width_m": 0.2747080631499532,
+    "same_regime": {
+      "coverage": 0.9178571428571428,
+      "mae_forecast_m": 0.1288019219121842,
+      "mae_persistence_m": 0.2678145128397981,
+      "alert_conformal": {
+        "precision": 0.8452787258248009,
+        "recall": 1.0,
+        "tp": 743,
+        "fp": 136,
+        "fn": 0,
+        "tn": 1921
+      },
+      "alert_point": {
+        "precision": 0.9593175853018373,
+        "recall": 0.9838492597577388,
+        "tp": 731,
+        "fp": 31,
+        "fn": 12,
+        "tn": 2026
+      },
+      "alert_trend": {
+        "precision": 0.9101717305151915,
+        "recall": 0.927321668909825,
+        "tp": 689,
+        "fp": 68,
+        "fn": 54,
+        "tn": 1989
+      }
+    },
+    "abstraction_x1.5_from_month_200": {
+      "coverage": 0.8478571428571429,
+      "mae_forecast_m": 0.1518569583782425,
+      "mae_persistence_m": 0.35563842097256015,
+      "alert_conformal": {
+        "precision": 0.9499209277807064,
+        "recall": 0.9983379501385041,
+        "tp": 1802,
+        "fp": 95,
+        "fn": 3,
+        "tn": 900
+      },
+      "alert_point": {
+        "precision": 0.9888703394546466,
+        "recall": 0.9844875346260388,
+        "tp": 1777,
+        "fp": 20,
+        "fn": 28,
+        "tn": 975
+      },
+      "alert_trend": {
+        "precision": 0.9647382920110192,
+        "recall": 0.9700831024930748,
+        "tp": 1751,
+        "fp": 64,
+        "fn": 54,
+        "tn": 931
+      }
+    }
+  },
+  "real": {
+    "note": "DWR continuous monthly groundwater elevation, meters, 6-month head change. Split by well site (co-located screens stay together). InSAR is an evaluation label, not a model input. No foundation model.",
+    "groundwater_source": "California DWR Continuous Groundwater Level Measurements, monthly mean water-surface elevation, quality codes 1, 2 and 10",
+    "groundwater_url": "https://data.cnra.ca.gov/dataset/618c73fe-b28c-4399-a824-43d0278fe974/resource/16f256f8-35a4-4cab-ae02-399a2914c282/download/gwl-monthly.csv",
+    "insar_source": "DWR TRE ALTAMIRA cumulative vertical displacement since 2015-06-13, sampled at well sites from the public image services; feet converted to meters",
+    "insar_url": "https://gis.water.ca.gov/arcgisimg/rest/services/SAR",
+    "retrieved": "2026-11-06",
+    "insar_failed_dates": [],
+    "units": "meters",
+    "horizon_months": 6,
+    "split": "well_site",
+    "seed": 0,
+    "decline_event_m": 1.0,
+    "subsidence_event_m": 0.03,
+    "min_origins": 24,
+    "n_wells": 462,
+    "n_sites": 183,
+    "n_train_wells": 232,
+    "n_cal_wells": 114,
+    "n_test_wells": 116,
+    "n_train_sites": 91,
+    "n_cal_sites": 45,
+    "n_test_sites": 47,
+    "n_wells_without_trusted_coordinates": 0,
+    "counties": {
+      "Butte": 60,
+      "Colusa": 32,
+      "Glenn": 87,
+      "Kings": 3,
+      "Mendocino": 3,
+      "Modoc": 4,
+      "Plumas": 14,
+      "Sacramento": 9,
+      "San Joaquin": 24,
+      "Shasta": 18,
+      "Siskiyou": 8,
+      "Solano": 28,
+      "Sutter": 53,
+      "Tehama": 54,
+      "Yolo": 58,
+      "Yuba": 7
+    },
+    "conformal_half_width_m": 2.6658178974407103,
+    "test": {
+      "n_origins": 7960,
+      "coverage": 0.8580170273146506,
+      "mae_ridge_m": 1.5182092364755506,
+      "mae_persistence_m": 2.880507047268535,
+      "mae_simple_regression_m": 1.562642441199151,
+      "event_rate": 0.2841708542713568,
+      "alert_conformal": {
+        "precision": 0.37000165920026545,
+        "recall": 0.9858532272325375,
+        "tp": 2230,
+        "fp": 3797,
+        "fn": 32,
+        "tn": 1901
+      },
+      "alert_point": {
+        "precision": 0.6436482084690553,
+        "recall": 0.8735632183908046,
+        "tp": 1976,
+        "fp": 1094,
+        "fn": 286,
+        "tn": 4604
+      },
+      "alert_trend": {
+        "precision": 0.3109521188772702,
+        "recall": 0.2497789566755084,
+        "tp": 565,
+        "fp": 1252,
+        "fn": 1697,
+        "tn": 4446
+      }
+    },
+    "subsidence": {
+      "available": true,
+      "n_train_sites": 78,
+      "n_test_sites": 41,
+      "n_origins": 2203,
+      "event_rate": 0.005447117566954153,
+      "mae_persistence_m": 0.014073369950068089,
+      "mae_simple_regression_m": 0.005193797616225614,
+      "alert_persistence": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "tp": 0,
+        "fp": 16,
+        "fn": 12,
+        "tn": 2175
+      },
+      "alert_simple_regression": {
+        "precision": null,
+        "recall": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 12,
+        "tn": 2191
+      },
+      "alert_head_decline": {
+        "precision": 0.011615628299894404,
+        "recall": 0.9166666666666666,
+        "tp": 11,
+        "fp": 936,
+        "fn": 1,
+        "tn": 1255
+      }
+    }
+  }
+}
