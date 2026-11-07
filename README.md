@@ -4,6 +4,8 @@ Groundwater-level forecasting with calibrated intervals, scored against persiste
 
 **Maturity: TRL 4** ([docs/TRL.md](docs/TRL.md)). On held-out California DWR wells the 6-month ridge MAE is **1.518 m**, against **2.881 m** for persistence and **1.563 m** for ordinary regression. Coverage of the 90 percent interval is **0.858**. The subsidence warning is not supported.
 
+Internal filing, not a submission: [docs/REGISTRATION.md](docs/REGISTRATION.md), [docs/JOURNAL_FIT.md](docs/JOURNAL_FIT.md), [article/abstract.md](article/abstract.md).
+
 - `data/wells_monthly.csv` — DWR continuous monthly water-surface elevation, quality codes 1, 2 and 10, converted from feet
 - `data/insar_monthly.csv` — TRE Altamira cumulative vertical displacement since 2015-06-13, sampled at the well sites
 - `src/aquiferguard/forecast.py` — ridge and ordinary-regression forecasts, split-conformal half-width

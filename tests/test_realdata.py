@@ -114,8 +114,14 @@ def test_docs_quote_the_real_run():
         tokens.append(f"{scored[name]['recall']:.3f}")
     trl = (root / "docs" / "TRL.md").read_text(encoding="utf-8")
     readme = (root / "README.md").read_text(encoding="utf-8")
+    registration = (root / "docs" / "REGISTRATION.md").read_text(encoding="utf-8")
+    abstract = (root / "article" / "abstract.md").read_text(encoding="utf-8")
     for token in tokens[:4]:
         assert token in readme
         assert token in trl
+        assert token in registration
+        assert token in abstract
     for token in tokens:
         assert token in trl, token
+        assert token in registration, token
+        assert token in abstract, token
