@@ -6,6 +6,6 @@ A ridge regression has mean absolute error 1.518 m. An ordinary regression on th
 
 TRE Altamira cumulative vertical displacement since 13 June 2015, published by DWR, is used only as a label at the well site. On 41 test sites and 2203 origins, a further downward movement of at least 3 cm in six months occurs at rate 0.005 (12 origins). Persistence of the recent displacement change has error 0.014 m and precision 0.000, recall 0.000. An ordinary regression on the recent head change and the recent displacement change has error 0.005 m, issues no alert, and has recall 0.000. Alerting when the head forecast drops by more than 1 m has precision 0.012 and recall 0.917. That rule is not a subsidence warning on this network.
 
-This note is not submitted. The IEEE J-STARS special issue on foundation models and multi-source remote sensing is a different kind of paper, and a patent attorney has not reviewed this text. It describes only ridge regression, ordinary least squares, persistence, and a split-conformal interval.
+This note is not submitted. The IEEE J-STARS special issue on foundation models and multi-source remote sensing is a different kind of paper. It describes only ridge regression, ordinary least squares, persistence, and a split-conformal interval.
 
 Numbers are rounded from `research/results.json`, which `python research/run_study.py` writes. They were not entered by hand.

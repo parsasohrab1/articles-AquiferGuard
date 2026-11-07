@@ -27,4 +27,4 @@ On the held-out wells the ridge MAE is 1.518 m, against 2.881 m for persistence 
 
 Do not submit. No file has been uploaded.
 
-The window is open on the day of this check. Submission stays closed anyway. The manuscript would not be a remote-sensing or foundation-model paper, the 0.90 interval does not hold, and a patent attorney has not confirmed that the text to be sent discloses no claimed method. The note in [../article/abstract.md](../article/abstract.md) is not a submission. The internal filing card is [REGISTRATION.md](REGISTRATION.md).
+The window is open on the day of this check. Submission stays closed anyway. The manuscript would not be a remote-sensing or foundation-model paper, and the 0.90 interval does not hold. The note in [../article/abstract.md](../article/abstract.md) is not a submission. The internal filing card is [REGISTRATION.md](REGISTRATION.md).
